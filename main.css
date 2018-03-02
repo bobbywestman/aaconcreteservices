@@ -1,0 +1,87 @@
+/**********************************************************/
+/*TODO*/
+/**********************************************************//*
+
+- make media breakpoints for responsiveness
+
+*//**********************************************************/
+/*notes*/
+/**********************************************************//*
+
+animation: name duration timing delay iterations direction fill-mode play-state
+^defaults: none 0 ease 0 1 normal none running
+
+font-family: 'Parisienne', cursive;
+font-family: 'Carrois Gothic SC', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Graduate', cursive;
+font-family: 'Keania One', cursive;
+
+*//**********************************************************/
+/*globals*/
+/**********************************************************/
+
+/*maybe? ->*/
+/*::-webkit-scrollbar {
+  display: none;
+}*/
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+/**********************************************************/
+/*title screen*/
+/**********************************************************/
+
+.title-screen::before {
+  /*use ::before selector to add resizable background image before empty div*/
+  /*resize 5% bigger on all sides to remove ugly white border caused by blur filter*/
+  content: "";
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  z-index: -1;
+  display: block;
+
+  background: url(images/pouring.jpg) no-repeat center center;
+  background-size:cover;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.title-screen {
+  /*full-screen div*/
+  width: 100%;
+  height: 100%;
+}
+
+.title-screen h1 {
+  /*absolute inside a full-screen div*/
+  position: absolute; 
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.80);;
+  text-align: center;
+  bottom: 50%;
+  transform: translate(0%, 50%);
+  padding: 15px;
+  
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 75px;
+  font-weight: 400;
+  color: white;
+  opacity: 0;
+}
+
+.fade-in-title { 
+  /*set delay to 0s here, will be handled in js*/
+  animation: fade-in 3s ease 0s forwards;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
