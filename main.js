@@ -53,9 +53,16 @@ var fadeInTitle = function() {
 //     }
 // }, 250);
 
-// $(function(){
-// 	var $w = $(window),
-// 		$background = $('#background');
+// var lastHeight = '';
 
-// 	$background.css
-// });
+$(window).on('resize', function () {
+    // remove height when normal resize event is fired and content redrawn
+    if (lastHeight) {
+        $('#bg').height(lastHeight = '');
+    }
+}).on('touchmove', function () {
+    // when window height changes adjust height of the div
+    if (lastHeight != window.innerHeight) {
+        $('#bg').height(lastHeight = window.innerHeight);
+    }
+});
