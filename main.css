@@ -11,17 +11,11 @@
 animation: name duration timing delay iterations direction fill-mode play-state
 ^defaults: none 0 ease 0 1 normal none running
 
-font-family: 'Parisienne', cursive;
-font-family: 'Carrois Gothic SC', sans-serif;
-font-family: 'Fredericka the Great', cursive;
-font-family: 'Graduate', cursive;
-font-family: 'Keania One', cursive;
-
 *//**********************************************************/
 /*globals*/
 /**********************************************************/
 
-/*maybe? ->*/
+/*maybe?*/
 /*::-webkit-scrollbar {
   display: none;
 }*/
@@ -32,7 +26,7 @@ html,body {
 }
 
 /**********************************************************/
-/*title screen*/
+/*title-screen*/
 /**********************************************************/
 
 .title-screen::before {
@@ -65,15 +59,21 @@ html,body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.80);;
   text-align: center;
-  bottom: 50%;
-  transform: translate(0%, 50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   
-  padding: 5px;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 75px;
+  padding: 10px;
+  font-size: 60px;
   font-weight: 400;
   color: white;
   opacity: 0;
+
+  /*font-family: 'Fredericka the Great', cursive;*/
+  font-family: 'Spectral SC', serif;
+  /*font-family: 'Marcellus SC', serif;*/
+  /*font-family: 'IM Fell French Canon SC', serif;*/
+  /*font-family: 'IM Fell English SC', serif;*/
 }
 
 .fade-in-title { 
@@ -84,4 +84,12 @@ html,body {
 @keyframes fade-in {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+/**********************************************************/
+/*task-bar*/
+/**********************************************************/
+
+.task-bar {
+
 }
