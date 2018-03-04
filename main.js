@@ -55,14 +55,29 @@ var fadeInTitle = function() {
 
 // var lastHeight = '';
 
-$(window).on('resize', function () {
-    // remove height when normal resize event is fired and content redrawn
-    if (lastHeight) {
-        $('#bg').height(lastHeight = '');
+// $(window).on('resize', function () {
+//     // remove height when normal resize event is fired and content redrawn
+//     if (lastHeight) {
+//         $('#bg').height(lastHeight = '');
+//     }
+// }).on('touchmove', function () {
+//     // when window height changes adjust height of the div
+//     if (lastHeight != window.innerHeight) {
+//         $('#bg').height(lastHeight = window.innerHeight);
+//     }
+// });
+
+(function() {
+    function size() {
+      // you can change here what you prefer
+      if (/android|webos|iphone|ipad|ipod|blackberry|nokia|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
+        var theminheight = Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight);
+        //now apply height ... if needed...add html & body ... i need and i use it
+        $('html body #bg').css('height', theminheight);
+      }
     }
-}).on('touchmove', function () {
-    // when window height changes adjust height of the div
-    if (lastHeight != window.innerHeight) {
-        $('#bg').height(lastHeight = window.innerHeight);
-    }
-});
+    window.addEventListener('resize orientationchange', function() {
+      size();
+    }, false);
+    size();
+  }());
