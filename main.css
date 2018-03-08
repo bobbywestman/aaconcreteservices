@@ -25,48 +25,85 @@ html,body {
   height: 100%;
 }
 
-.bg {
-  background: url(images/pouring.jpg) no-repeat center center;
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/**********************************************************/
+/*title*/
+/**********************************************************/
+
+.title {
+  background: url(images/pour.png) no-repeat center center;
   background-size: cover;
-  position: fixed;
-  z-index: -1;
-  bottom:0;
-  top:0;
-  left:0;
-  right:0;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 85%;
 }
 
-/**********************************************************/
-/*title-screen*/
-/**********************************************************/
-
-.title-screen {
-  /*full-screen div*/
-  width: 100%;
-  height: 100%;
-}
-
-.title-screen h1 {
-  /*absolute inside a full-screen div*/
-  position: absolute; 
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.80);;
-  text-align: center;
+.title-contents {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  padding: 10px;
-  font-size: 60px;
-  font-weight: 400;
-  color: white;
-  opacity: 0;
+  text-align: center;
 
   /*font-family: 'Fredericka the Great', cursive;*/
-  font-family: 'Spectral SC', serif;
+  /*font-family: 'Spectral SC', serif;*/
   /*font-family: 'Marcellus SC', serif;*/
   /*font-family: 'IM Fell French Canon SC', serif;*/
   /*font-family: 'IM Fell English SC', serif;*/
+}
+
+.title-name {
+  font-family: 'Spectral SC', serif;
+  font-weight: 400;
+  font-size: 80px;
+  color: white;
+  opacity: 0;
+  margin-bottom:40px;
+}
+
+.title-hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+  opacity: 0;
+}
+
+.title-heading {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.title-heading-noflair {
+  font-family: 'IM Fell English', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: rgb(245,245,245);
+  opacity: 0;
+  display: inline;
+  /*make lowercase (not small caps)*/
+}
+
+.title-heading-flair {
+  font-family: 'IM Fell English SC', serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: white;
+  opacity: 0;
+  display: inline;
+}
+
+.title-subheading {
+  font-family: 'Marcellus SC', serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: white;
+  opacity: 0;
+  margin-top: 40px;
 }
 
 .fade-in-title { 
@@ -74,15 +111,115 @@ html,body {
   animation: fade-in 3s ease 0s forwards;
 }
 
-@keyframes fade-in {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+/**********************************************************/
+/*statement*/
+/**********************************************************/
+
+.statement {
+  background-color: rgb(240,240,240);
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+}
+
+.statement-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.statement-heading {
+  font-family: 'Spectral SC', serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: black;
+  /*opacity: 0;*/
+}
+
+.statement-description {
+  font-family: 'IM Fell English', serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: black;
+  /*opacity: 0;*/
+  margin-top: 25px;
 }
 
 /**********************************************************/
-/*task-bar*/
+/*established*/
+/**********************************************************/
+.established {
+  background-color: rgb(70,70,70);
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+
+.established-tile {
+  float:left;
+  width:33.3333333%;
+}
+
+.established-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.established-title {
+  font-family: 'Spectral SC', serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: white;
+  /*opacity: 0;*/
+}
+
+.established-year {
+  font-family: 'Marcellus SC', serif;
+  font-weight: 400;
+  font-size: 90px;
+  /*opacity: 0;*/
+  color: white;
+}
+
+.established-hr {
+  border:0;
+  height: 2px;
+  color: white;
+  background: white;
+  font-size: 0;
+  width: 75%;
+  margin-top: 20px;
+}
+
+.established-description {
+  font-family: 'IM Fell English', serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  margin-top: 25px;
+  /*make lowercase (not small caps)*/
+}
+
+/**********************************************************/
+/*services*/
 /**********************************************************/
 
-.task-bar {
+/**********************************************************/
+/*why*/
+/**********************************************************/
 
-}
+/**********************************************************/
+/*contact*/
+/**********************************************************/
+
+/**********************************************************/
+/*footer*/
+/**********************************************************/
