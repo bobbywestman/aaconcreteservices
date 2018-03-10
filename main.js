@@ -7,7 +7,6 @@
 - pin title bar to top and fade in nav bar
 - fade in tiles
 - clean up this file
-- rename fadeInTitle functions (fadein1, 2, 3, etc)
 */
 
 /**********************************************************/
@@ -28,17 +27,13 @@ $(window).on('load', function () {
 var fadeInTitle = function() {
 	$(".title-name").addClass("fade-in-title");
 	$(".title-subheading").addClass("fade-in-title");
-
-	setTimeout(fadeInTitleHr, 400);
-};
-var fadeInTitleHr = function() {
 	$(".title-hr").addClass("fade-in-title");
-	setTimeout(fadeInTitleHeadingFlair, 400);
+	setTimeout(fadeInTitleHeadingFlair, 700);
 };
 var fadeInTitleHeadingFlair = function() {
 	$(".title-heading-flair").addClass("fade-in-title");
-	setTimeout(fadeInTitleHeading, 1700);
+	setTimeout(fadeInTitleHeadingNoFlair, 2000);
 };
-var fadeInTitleHeading = function() {
+var fadeInTitleHeadingNoFlair = function() {
 	$(".title-heading-noflair").addClass("fade-in-title");
 };
