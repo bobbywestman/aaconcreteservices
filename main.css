@@ -35,7 +35,7 @@ html,body {
 /**********************************************************/
 
 .title {
-  background: url(images/pour.png) no-repeat center center;
+  background: url(images/pour.jpg) no-repeat center center;
   background-size: cover;
   display: block;
   position: relative;
@@ -73,12 +73,12 @@ html,body {
   opacity: 0;
 }
 
-.title-heading {
+.title-header {
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
-.title-heading-noflair {
+.title-header-noflair {
   font-family: 'IM Fell English', serif;
   font-weight: 400;
   font-size: 40px;
@@ -87,7 +87,7 @@ html,body {
   display: inline;
 }
 
-.title-heading-flair {
+.title-header-flair {
   font-family: 'IM Fell English SC', serif;
   font-weight: 400;
   font-size: 50px;
@@ -96,7 +96,7 @@ html,body {
   display: inline;
 }
 
-.title-subheading {
+.title-subheader {
   font-family: 'Marcellus SC', serif;
   font-weight: 400;
   font-size: 30px;
@@ -166,7 +166,7 @@ html,body {
   transform: translate(-50%, -50%);
 }
 
-.statement-heading {
+.statement-header {
   font-family: 'Spectral SC', serif;
   font-weight: 400;
   font-size: 30px;
@@ -263,8 +263,7 @@ html,body {
   display: block;
   position: relative;
   width: 100%;
-  height: 35%;
-  min-height:100px;
+  height: 40%;
 }
 
 .services-contents {
@@ -276,12 +275,19 @@ html,body {
   width: 30%;
 }
 
-.services-heading {
-  display: block;
+.services-header {
   font-family: 'Spectral SC', serif;
   font-weight: 400;
   font-size: 30px;
   color: black;
+  margin-bottom: 40px;
+  display: block;
+}
+
+.services-lists::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .services-list {
@@ -289,11 +295,25 @@ html,body {
   font-weight: 400;
   font-size: 22px;
   color: black;
-  margin-top: 25px;
-  float:left;
   width:50%;
-  height:100%;
-  display:inline-block;
+  float: left;
+  display: inline-block;
+}
+
+.services-list-left li {
+  margin-top: 15px;
+}
+.services-list-right li {
+  margin-top: 15px;
+}
+
+.services-footer {
+  font-family: 'Spectral SC', serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: black;
+  margin-top: 40px;
+  display: block;
 }
 
 /**********************************************************/

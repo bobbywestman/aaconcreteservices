@@ -26,14 +26,14 @@ $(window).on('load', function () {
 //use this to add a delay to the animation, only after window loads
 var fadeInTitle = function() {
 	$(".title-name").addClass("fade-in-title");
-	$(".title-subheading").addClass("fade-in-title");
+	$(".title-subheader").addClass("fade-in-title");
 	$(".title-hr").addClass("fade-in-title");
-	setTimeout(fadeInTitleHeadingFlair, 700);
+	setTimeout(fadeInTitleHeaderFlair, 700);
 };
-var fadeInTitleHeadingFlair = function() {
-	$(".title-heading-flair").addClass("fade-in-title");
-	setTimeout(fadeInTitleHeadingNoFlair, 2000);
+var fadeInTitleHeaderFlair = function() {
+	$(".title-header-flair").addClass("fade-in-title");
+	setTimeout(fadeInTitleHeaderNoFlair, 2000);
 };
-var fadeInTitleHeadingNoFlair = function() {
-	$(".title-heading-noflair").addClass("fade-in-title");
+var fadeInTitleHeaderNoFlair = function() {
+	$(".title-header-noflair").addClass("fade-in-title");
 };
