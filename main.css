@@ -35,7 +35,7 @@ html,body {
 /**********************************************************/
 
 .title {
-  background: url(images/_cover.jpg) no-repeat center center;
+  background: url(images/cover.jpg) no-repeat center center;
   background-size: cover;
   display: block;
   position: relative;
@@ -106,7 +106,6 @@ html,body {
   margin-top: 40px;
   white-space: nowrap;
   overflow: visible;
-
 }
 
 .fade-in-title { 
@@ -245,14 +244,14 @@ html,body {
 }
 
 .established-img-left {
-  background: url(images/_completed.jpg) no-repeat center center;
+  background: url(images/trowel.jpg) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .established-img-right {
-  background: url(images/_prep.jpg) no-repeat center center;
+  background: url(images/prep.jpg) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -353,7 +352,7 @@ html,body {
 }
 
 .why-img {
-  background: url(images/_pump2.jpg) no-repeat center center;
+  background: url(images/pump2.jpg) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 100%;
